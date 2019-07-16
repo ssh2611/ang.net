@@ -22,7 +22,21 @@ import {NavComponent} from './nav.component'
 import{ MatToolbarModule } from '@angular/material'
 import {HomeComponent} from './home.component'
 
-var routes= [];
+var routes= [
+  {
+    path:'',
+    component: HomeComponent
+  },
+  {
+    path:'messages/:name',
+    component: MessagesComponent
+  },
+  {
+    path:'messages',
+    component: MessagesComponent
+  }
+  
+];
 
 @NgModule({
   declarations: [

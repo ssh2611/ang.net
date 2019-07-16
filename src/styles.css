@@ -4,3 +4,8 @@
 body {
     background: #aaaaaa
 }
+
+.card{
+    margin-top: 8px;
+    background: rgb(0, 70, 128);
+}

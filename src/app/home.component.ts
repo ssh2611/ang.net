@@ -5,15 +5,15 @@ import {NavComponent} from './nav.component'
 
 
 @Component({
-  selector: 'app-root',
+  selector: 'home',
   template: `
             <nav></nav> 
-             <new-message></new-message>
-             <messages> </messages>
+            <router-outlet></router-outlet>
              `,
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+
+export class HomeComponent {
   
 
 }

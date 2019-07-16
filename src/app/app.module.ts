@@ -1,19 +1,36 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {RouterModule} from '@angular/router'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MessagesComponent } from './messages.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatButtonModule} from '@angular/material';
+// import {MatButtonModule} from '@angular/material';
 import {MatCardModule} from '@angular/material/card';
 import {WebService} from './web.service';
 import { HttpClientModule } from '@angular/common/http';
+import {NewMessageComponent} from './new-message.component'
+import {FormsModule} from '@angular/forms'
+import {
+  MatButtonModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatRippleModule
+} from '@angular/material';
+import {NavComponent} from './nav.component'
+import{ MatToolbarModule } from '@angular/material'
+import {HomeComponent} from './home.component'
+
+var routes= [];
 
 @NgModule({
   declarations: [
     AppComponent,
-    MessagesComponent
+    MessagesComponent,
+    NewMessageComponent,
+    NavComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -21,7 +38,12 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     MatButtonModule,
     MatCardModule,
-    HttpClientModule
+    HttpClientModule,
+    MatButtonModule,
+    MatInputModule,
+    FormsModule,
+    MatToolbarModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [WebService],
   bootstrap: [AppComponent]
